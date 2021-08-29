@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Clingo</string>
+    <string name="Input">Input</string>
+    <string name="Output">Output</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Clingo">Clingo</string>
+    <string name="button">Run</string>
+    <string name="Settint">Setting</string>
+    <string name="name">Write here</string>
+    <string name="statistics">statistics</string>
+    <string name="project">project</string>
+    <string name="update">Update</string>
+    <string name="factoryBtn">Factory Reset</string>
+    <string name="dlFolderBtn">Copy from download folder</string>
+    <string name="downloadFromUrl">Download Clingo from your URL</string>
+
+</resources>

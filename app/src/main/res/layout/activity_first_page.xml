@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:screenOrientation="portrait">
+
+
+        <Button
+            android:id="@+id/runBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+
+            android:text="@string/button" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        >
+
+
+
+        <Switch
+            android:id="@+id/switchproject"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+
+            android:text="@string/project" />
+
+        <Switch
+            android:id="@+id/switchstatistics"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/statistics" />
+
+    </LinearLayout>
+
+
+
+
+
+    <EditText
+
+        android:lines="18"
+        android:id="@+id/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ems="10"
+        android:hint="Write Here"
+        android:inputType="textMultiLine"
+
+        android:layout_margin="10dp"
+        android:autofillHints="" />
+
+
+
+
+
+
+
+</LinearLayout>

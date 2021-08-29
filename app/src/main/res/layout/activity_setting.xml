@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:screenOrientation="portrait">
+
+
+
+
+    <TextView
+        android:id="@+id/internetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </TextView>
+
+
+    <Button
+        android:id="@+id/factoryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/factoryBtn" />
+    <Button
+        android:id="@+id/dlFolderBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/dlFolderBtn" />
+    <EditText
+
+        android:lines="1"
+        android:id="@+id/inputUrl"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:inputType="textUri"
+        android:hint="Write your URL Here"
+
+        android:layout_margin="10dp"
+
+        />
+    <Button
+        android:id="@+id/downloadFromUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/downloadFromUrl" />
+
+
+
+
+</LinearLayout>

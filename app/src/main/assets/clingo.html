@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <script type="text/javascript">
+var answersetfollows = true;
+var firstanswerset = true;
+var output = "";
+
+Module = {
+  preRun: [],
+  postRun: [],
+  print: (function() {
+    return function(text) {
+      if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+	  /*if (text.startsWith("Answer:")){
+		answersetfollows = true;
+	  }else{
+		if (answersetfollows){
+		  if (!firstanswerset) output += ";";
+		  output += text
+		  answersetfollows = false;
+		  firstanswerset = false;
+		}
+	  } */
+	  output += text + "\n";
+    };
+  })(),
+  printErr: function(text) {
+    if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+    if (text == "Calling stub instead of signal()") { return; }
+    var prefix = "pre-main prep time: ";
+    if (typeof text=="string" && prefix == text.slice(0, prefix.length)) { text = "Ready to go!" }
+    output += "STDERR: " + text + "\n";
+  }
+};
+
+function solveProg(localprogram,opt) {
+  answersetfollows = true;
+  firstanswerset = true;
+  output = "";
+  Module.ccall('run', 'number', ['string', 'string'], [localprogram , opt])
+  return output
+}
+
+// global
+var Module;
+</script>
+  <script src="clingo.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+
+
+<pre id="output" class="code">Waiting ...</pre>
+
+
+
+<script>
+function solve(w,q) {
+var x =solveProg(w,q);
+document.getElementById("output").innerHTML = x;
+}
+</script>
+
+
+
+
+</body>
+</html>
